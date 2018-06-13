@@ -18,7 +18,7 @@ export class HomeComponent {
   private context;
   private widthMultiplier;
   private heightMultiplier;
-  public hex; 
+  public hex;
   private spacingOffset;
   private lastClick;
 
@@ -34,6 +34,8 @@ export class HomeComponent {
   ngOnInit() {
     this.fileInput = <HTMLInputElement> document.getElementById('myInput');
     this.canvas = <HTMLCanvasElement> document.getElementById('myCanvas');
+    this.canvas.height = 650;
+    this.canvas.width = 650;
     this.hiddenImage = <HTMLImageElement> document.getElementById('hiddenImage');
     this.confirmModule.disableButton();
     this.canvas.addEventListener('click', (e) => {
@@ -47,7 +49,7 @@ export class HomeComponent {
     });
     this.context = this.canvas.getContext('2d');
   }
-  
+
   getPicture(){
     var selectedFile = this.fileInput.files[0];
     var reader = new FileReader();
@@ -76,14 +78,10 @@ export class HomeComponent {
       this.hiddenImage.style.height = '650px';
       this.hiddenImage.style.width = 'auto';
       this.context.drawImage(this.hiddenImage, (650 - this.hiddenImage.width)/2, 0, this.hiddenImage.width, this.hiddenImage.height);
-      this.hiddenImage.style.width = '0';
-      this.hiddenImage.style.height = '1';
     } else {
       this.hiddenImage.style.width = '650px';
       this.hiddenImage.style.height = 'auto';
       this.context.drawImage(this.hiddenImage, 0, 0, this.hiddenImage.width, this.hiddenImage.height);
-      this.hiddenImage.style.width = '1';
-      this.hiddenImage.style.height = '0';
     }
   }
 
@@ -93,7 +91,7 @@ export class HomeComponent {
     this.confirmModule.setHexColor(hex);
   }
 
-  rgbToHex(rgb) { 
+  rgbToHex(rgb) {
     var hex = Number(rgb).toString(16);
     if (hex.length < 2) {
          hex = "0" + hex;

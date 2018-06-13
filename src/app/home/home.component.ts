@@ -18,7 +18,7 @@ export class HomeComponent {
   private context;
   private widthMultiplier;
   private heightMultiplier;
-  private hex; 
+  public hex; 
   private spacingOffset;
   private lastClick;
 

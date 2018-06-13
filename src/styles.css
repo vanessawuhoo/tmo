@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+.navbar-brand {
+    font-size: 2rem;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.nav-link {
+    margin-right: 10px;
+}

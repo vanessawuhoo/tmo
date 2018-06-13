@@ -1,0 +1,49 @@
+
+.centered-content {
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+
+
+    input {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.hidden-image {
+    visibility: hidden;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+
+canvas {
+    border: 1px solid black;
+    width: 650px;
+    height: 650px;
+    margin-top: 40px;
+    margin-left: auto;
+}
+
+app-confirm-module {
+    margin-right: auto;
+    margin-top: 200px;
+    margin-left: 30px;
+}
+
+.color-picker {
+    max-height: 700px;
+    display: flex;
+    flex-direction: row;
+}
+
+.upload-bar {
+    .upload {
+        margin-right: 10px;
+    }
+}

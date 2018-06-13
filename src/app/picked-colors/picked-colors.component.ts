@@ -9,7 +9,7 @@ import * as sccolor from 'sc-color';
 })
 export class PickedColorsComponent implements OnInit {
   private pickedColors;
-  private sortedColors;
+  public sortedColors;
   private originColor;
 
   constructor() { }
